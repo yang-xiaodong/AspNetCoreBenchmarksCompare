@@ -1,8 +1,8 @@
-# AspNetCoreBenchmarksCompare
+﻿# AspNetCoreBenchmarksCompare
 About ASP.NET Core helloworld project benchmarks compare with ASP.NET、Python django、NodeJS、Java servlet on Windows and Linux. 
 
 编号|对比方 | 系统环境 | 宿主环境 | 测试目标
----|---|---|---|--
+---|---|---|---|---
 1|`ASP.NET Core` vs `ASP.NET Core` | Windows | `Kestrel` vs `IIS` | 相同平台**不同宿**主间性能差距
 2|`ASP.NET Core` vs `ASP.NET` | Windows | `IIS` vs `IIS` | 相同平台相同宿主**不同框架**间性能差距
 3|`ASP.NET Core` vs `ASP.NET`  | Windows | `Kestrel` vs `IIS` | 相同平台**不同宿主不同框架**间性能差距
