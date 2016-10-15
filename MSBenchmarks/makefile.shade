@@ -1,0 +1,39 @@
+var AUTHORS='Microsoft Open Technologies, Inc.'
+
+use-standard-lifecycle
+k-standard-goals
+
+#build-compile target='compile'
+  @{
+    var projectFiles = Files
+        .Include("src/**/project.json")
+        .Include("experimental/**/project.json")
+        .ToList();
+
+    projectFiles.ForEach(projectFile => DotnetBuild(projectFile, E("Configuration"), E("KOREBUILD_BUILD_FRAMEWORK")));
+  }
+
+#benchmark-tests .compile
+  @{
+    var sql = string.IsNullOrEmpty(E("BENCHMARK_SQL")) ? string.Empty : "-q " + E("BENCHMARK_SQL");
+    var scenarios = new string[]
+    {
+      "-n Plaintext",
+      "-n Plaintext -f Benchmarks.PassthroughConnectionFilter",
+      "-n Plaintext -m https",
+      "-n Json",
+      "-n Json -f Benchmarks.PassthroughConnectionFilter",
+      "-n Json -m https",
+      "-n MvcPlaintext",
+      "-n MvcJson",
+      "-n MemoryCachePlaintext",
+      "-n ResponseCachingPlaintextCached",
+      "-n ResponseCachingPlaintextResponseNoCache",
+      "-n ResponseCachingPlaintextRequestNoCache",
+      "-n ResponseCachingPlaintextVaryByCached",
+    };
+    foreach (var scenario in scenarios) {
+      Dotnet(String.Format("-v run -- {0} -s {1} -c {2} {3}", scenario, E("BENCHMARK_SERVER"), E("BENCHMARK_CLIENT"), sql),
+        "src/BenchmarksDriver");
+    }
+  }
