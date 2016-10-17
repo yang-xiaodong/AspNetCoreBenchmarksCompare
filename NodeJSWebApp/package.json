@@ -1,0 +1,10 @@
+{
+  "name": "NodeJSWebApp",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "koa": "^1.2.4"
+  }
+}
