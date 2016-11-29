@@ -43,3 +43,5 @@ local.properties
 .project
 .settings
 .pyc
+/DotNetMvcApp/packages
+/NodeJSWebApp/node_modules.tar.gz
