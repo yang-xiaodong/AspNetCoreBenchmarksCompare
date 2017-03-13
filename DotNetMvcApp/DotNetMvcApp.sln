@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FxMvcApp", "FxMvcApp\FxMvcApp.csproj", "{8E09036E-6077-4F1B-9D98-28DD26349049}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FxCoreMvcApp", "FxCoreMvcApp\FxCoreMvcApp.xproj", "{E6B4C95F-EDD3-4151-957F-2098893AB68A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FxCoreMvcApp", "FxCoreMvcApp\FxCoreMvcApp.csproj", "{E6B4C95F-EDD3-4151-957F-2098893AB68A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FxCoreMvcAppWebListener", "FxCoreMvcAppWebListener\FxCoreMvcAppWebListener.xproj", "{D68733E7-01B7-4B01-9F75-ADB9840C9973}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FxCoreMvcAppWebListener", "FxCoreMvcAppWebListener\FxCoreMvcAppWebListener.csproj", "{D68733E7-01B7-4B01-9F75-ADB9840C9973}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
